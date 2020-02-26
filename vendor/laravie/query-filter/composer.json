@@ -1,0 +1,31 @@
+{
+    "name": "laravie/query-filter",
+    "description": "Database/Eloquent Query Builder filters for Laravel",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mior Muhammad Zaki",
+            "email": "crynobone@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.2",
+        "illuminate/database": "^5.8 || ^6.0 || ^7.0",
+        "illuminate/support": "^5.8 || ^6.0 || ^7.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.3.1",
+        "orchestra/testbench": "~3.8.5 || ^4.0.1 || ^5.0",
+        "phpunit/phpunit": "^8.4 || ^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Laravie\\QueryFilter\\" : "src/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev"
+}

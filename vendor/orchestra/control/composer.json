@@ -1,0 +1,38 @@
+{
+    "name": "orchestra/control",
+    "description": "Control Extension for Orchestra Platform",
+    "keywords": ["orchestra-platform", "orchestral", "extension", "laravel", "rbac", "theme"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mior Muhammad Zaki",
+            "email": "crynobone@gmail.com",
+            "homepage": "https://github.com/crynobone"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Orchestra\\Control\\" : "src/"
+        },
+        "classmap": [
+            "database/migrations"
+        ]
+    },
+    "require": {
+        "php": ">=7.2",
+        "orchestra/contracts": "^4.0",
+        "orchestra/extension": "^4.0",
+        "orchestra/support": "^4.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.2",
+        "orchestra/foundation": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "5.0-dev"
+        }
+    },
+    "minimum-stability": "dev"
+}

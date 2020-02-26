@@ -1,0 +1,41 @@
+{
+    "name": "orchestra/widget",
+    "description": "Widget Component for Orchestra Platform",
+    "homepage": "http://orchestraplatform.com/docs/latest/components/widget/",
+    "keywords": ["orchestra-platform", "orchestral", "laravel", "widget"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mior Muhammad Zaki",
+            "email": "crynobone@gmail.com",
+            "homepage": "https://github.com/crynobone"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Orchestra\\Widget\\" : "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Orchestra\\Widget\\Tests\\" : "tests/"
+        }
+    },
+    "require": {
+        "php": ">=7.2",
+        "orchestra/support": "^4.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.2",
+        "orchestra/testbench": "^4.0"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "4.0-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev"
+}

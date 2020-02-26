@@ -1,0 +1,56 @@
+#!/usr/bin/env php
+<?php
+
+$workingPath = getcwd();
+$config = ['preset' => 'laravel'];
+
+if (file_exists(__DIR__.'/vendor/autoload.php')) {
+    // Development environment.
+    require __DIR__.'/vendor/autoload.php';
+} else {
+    // Installation environment.
+    require __DIR__.'/../../autoload.php';
+}
+
+if (file_exists("{$workingPath}/canvas.yaml")) {
+    $config = Symfony\Component\Yaml\Yaml::parseFile("{$workingPath}/canvas.yaml");
+}
+
+$preset = Orchestra\Canvas\Canvas::preset(
+    $config, $workingPath, new Illuminate\Filesystem\Filesystem()
+);
+
+$app = new Symfony\Component\Console\Application('Canvas for Laravel', '0.1.0');
+
+if (! file_exists("{$workingPath}/canvas.yaml")) {
+    $app->add(new Orchestra\Canvas\Commands\Preset($preset));
+}
+
+$app->add(new Orchestra\Canvas\Commands\Channel($preset));
+$app->add(new Orchestra\Canvas\Commands\Console($preset));
+$app->add(new Orchestra\Canvas\Commands\Event($preset));
+$app->add(new Orchestra\Canvas\Commands\Exception($preset));
+$app->add(new Orchestra\Canvas\Commands\Database\Eloquent($preset));
+$app->add(new Orchestra\Canvas\Commands\Database\Factory($preset));
+$app->add(new Orchestra\Canvas\Commands\Database\Migration($preset));
+$app->add(new Orchestra\Canvas\Commands\Database\Observer($preset));
+$app->add(new Orchestra\Canvas\Commands\Job($preset));
+$app->add(new Orchestra\Canvas\Commands\Listener($preset));
+$app->add(new Orchestra\Canvas\Commands\Mail($preset));
+$app->add(new Orchestra\Canvas\Commands\Notification($preset));
+$app->add(new Orchestra\Canvas\Commands\Policy($preset));
+$app->add(new Orchestra\Canvas\Commands\Provider($preset));
+$app->add(new Orchestra\Canvas\Commands\Request($preset));
+$app->add(new Orchestra\Canvas\Commands\Resource($preset));
+$app->add(new Orchestra\Canvas\Commands\Routing\Controller($preset));
+$app->add(new Orchestra\Canvas\Commands\Routing\Middleware($preset));
+$app->add(new Orchestra\Canvas\Commands\Rule($preset));
+$app->add(new Orchestra\Canvas\Commands\Testing($preset));
+
+if ($preset->is('laravel')) {
+    $app->add(new Orchestra\Canvas\Commands\Database\Seeder($preset));
+}
+
+$preset->addAdditionalCommands($app);
+
+$app->run();

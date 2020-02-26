@@ -1,0 +1,42 @@
+{
+    "name": "orchestra/installer",
+    "description": "Orchestra Platform Installer",
+    "homepage": "http://orchestraplatform.com/docs/latest/",
+    "license": "MIT",
+    "keywords": ["orchestra-platform", "orchestral", "installer"],
+    "authors": [
+        {
+            "name": "Mior Muhammad Zaki",
+            "email": "crynobone@gmail.com",
+            "homepage": "https://github.com/crynobone"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Orchestra\\Installation\\" : "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Orchestra\\Installation\\Tests\\" : "tests/"
+        }
+    },
+    "require": {
+        "php": ">=7.2",
+        "orchestra/contracts": "^4.0"
+    },
+    "require-dev": {
+        "orchestra/canvas": "^4.1",
+        "orchestra/foundation": "^4.0",
+        "orchestra/testing": "^4.0.1"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "5.0-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev"
+}

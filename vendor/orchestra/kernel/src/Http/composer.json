@@ -1,0 +1,39 @@
+{
+    "name": "orchestra/http",
+    "description": "HTTP Component for Orchestra Platform",
+    "keywords": ["orchestra-platform", "orchestral", "http"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mior Muhammad Zaki",
+            "email": "crynobone@gmail.com",
+            "homepage": "https://github.com/crynobone"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Orchestra\\Http\\": ""
+        }
+    },
+    "require": {
+        "php": ">=7.2",
+        "orchestra/contracts": "^4.0",
+        "orchestra/extension": "^4.0",
+        "orchestra/support": "^4.0"
+    },
+    "suggest": {
+        "hashids/hashids": "Allow to use HashId as a URL id replacement (^1.0)."
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "5.0-dev"
+        }
+    },
+    "support": {
+        "issues": "https://github.com/orchestral/kernel/issues"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev"
+}

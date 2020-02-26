@@ -1,0 +1,44 @@
+{
+    "name": "orchestra/view",
+    "description": "View Component for Orchestra Platform",
+    "homepage": "http://orchestraplatform.com/docs/latest/components/view/",
+    "keywords": ["orchestra-platform", "orchestral", "laravel", "view", "theme"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mior Muhammad Zaki",
+            "email": "crynobone@gmail.com",
+            "homepage": "https://github.com/crynobone"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Orchestra\\View\\" : "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Orchestra\\View\\Tests\\" : "tests/"
+        }
+    },
+    "require": {
+        "php": ">=7.2",
+        "illuminate/view": "^6.0",
+        "orchestra/contracts": "^4.0",
+        "orchestra/memory": "^4.0",
+        "orchestra/support": "^4.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.2",
+        "orchestra/testbench": "^4.0"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "5.0-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev"
+}

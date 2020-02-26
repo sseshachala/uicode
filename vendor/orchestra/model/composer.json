@@ -1,0 +1,45 @@
+{
+    "name": "orchestra/model",
+    "description": "Model Component for Orchestra Platform",
+    "homepage": "http://orchestraplatform.com/docs/latest/components/model",
+    "keywords": ["orchestra-platform", "orchestral", "model", "laravel"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mior Muhammad Zaki",
+            "email": "crynobone@gmail.com",
+            "homepage": "https://github.com/crynobone"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Orchestra\\Model\\" : "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Orchestra\\Model\\Tests\\" : "tests/"
+        }
+    },
+    "require": {
+        "php": ">=7.2",
+        "laravie/query-filter": "^1.5",
+        "orchestra/contracts": "^4.0",
+        "orchestra/support-core": "^4.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.3",
+        "orchestra/auth": "^4.0",
+        "orchestra/memory": "^4.0",
+        "orchestra/testbench": "^4.0.1"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "5.0-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev"
+}

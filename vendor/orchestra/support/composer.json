@@ -1,0 +1,46 @@
+{
+    "name": "orchestra/support",
+    "description": "Support Component for Orchestra Platform",
+    "homepage": "http://orchestraplatform.com/docs/latest/components/support/",
+    "keywords": ["orchestra-platform", "orchestral", "laravel", "validator", "utilities"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mior Muhammad Zaki",
+            "email": "crynobone@gmail.com",
+            "homepage": "https://github.com/crynobone"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Orchestra\\Support\\Facades\\" : "src/Facades/",
+            "Orchestra\\Support\\Providers\\" : "src/Providers/",
+            "Orchestra\\Support\\" : "src/Support/"
+        }
+    },
+    "require": {
+        "php": ">=7.2",
+        "illuminate/support": "^6.12",
+        "orchestra/contracts": "^4.0",
+        "statamic/stringy": "^3.1"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.3.1",
+        "orchestra/testbench": "^4.5",
+        "phpunit/phpunit": "^8.4"
+    },
+    "replace": {
+        "orchestra/support-core": "self.version",
+        "orchestra/support-facades": "self.version",
+        "orchestra/support-providers": "self.version"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "5.0-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev"
+}

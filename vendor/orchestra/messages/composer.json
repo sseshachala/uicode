@@ -1,0 +1,45 @@
+{
+    "name": "orchestra/messages",
+    "description": "Messages Component for Laravel and Orchestra Platform",
+    "homepage": "http://orchestraplatform.com/docs/latest/components/messages/",
+    "keywords": ["orchestra-platform", "orchestral", "laravel", "messages", "notification"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mior Muhammad Zaki",
+            "email": "crynobone@gmail.com",
+            "homepage": "https://github.com/crynobone"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Orchestra\\Messages\\" : "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Orchestra\\Messages\\Tests\\" : "tests/"
+        }
+    },
+    "require": {
+        "php": ">=7.2",
+        "orchestra/contracts": "^4.0",
+        "orchestra/support": "^4.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.2",
+        "orchestra/testbench": "^4.0"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "5.0-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev"
+}

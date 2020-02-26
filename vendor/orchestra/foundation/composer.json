@@ -1,0 +1,81 @@
+{
+    "name": "orchestra/foundation",
+    "description": "Orchestra Platform Foundation",
+    "homepage": "http://orchestraplatform.com/docs/latest/",
+    "keywords": ["orchestra-platform", "orchestral", "laravel", "administrator", "admin", "user-management"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mior Muhammad Zaki",
+            "email": "crynobone@gmail.com",
+            "homepage": "https://github.com/crynobone"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Orchestra\\Foundation\\" : "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Orchestra\\Tests\\Controller\\" : "tests/Controller/",
+            "Orchestra\\Tests\\Feature\\" : "tests/Feature/",
+            "Orchestra\\Tests\\Unit\\" : "tests/Unit/"
+        }
+    },
+    "require": {
+        "php": ">=7.2",
+        "laravel/framework": "^6.10",
+        "laravie/authen": "^2.4",
+        "laravie/html": "^6.0",
+        "nesbot/carbon": "^2.10",
+        "orchestra/asset": "^4.0",
+        "orchestra/auth": "^4.0",
+        "orchestra/contracts": "^4.1",
+        "orchestra/extension": "^4.0.1",
+        "orchestra/html": "^4.1",
+        "orchestra/kernel": "^4.2",
+        "orchestra/memory": "^4.0",
+        "orchestra/messages": "^4.0",
+        "orchestra/model": "^4.3",
+        "orchestra/notifier": "^4.0.1",
+        "orchestra/support": "^4.0.2",
+        "orchestra/translation": "^4.0",
+        "orchestra/view": "^4.0",
+        "orchestra/widget": "^4.0"
+    },
+    "require-dev": {
+        "orchestra/canvas": "^4.1",
+        "orchestra/installer": "^4.3",
+        "orchestra/testing": "^4.2"
+    },
+    "suggest": {
+        "orchestra/avatar": "Add gravatar support for Orchestra Platform (^4.0).",
+        "orchestra/installer": "Allow Orchestra Platform to be installed in new application (^4.0).",
+        "orchestra/testing": "Allow better unit testing support for Orchestra Platform (^4.1)."
+    },
+    "scripts": {
+        "test": [
+            "./vendor/bin/phpunit --testsuite=Unit",
+            "./vendor/bin/phpunit --testsuite=Controller",
+            "./vendor/bin/phpunit --testsuite=Feature"
+        ],
+        "update:frontend": [
+            "bower update",
+            "bower-installer",
+            "gulp --production"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "5.0-dev"
+        }
+    },
+    "minimum-stability": "dev"
+}
